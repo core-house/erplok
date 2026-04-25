@@ -7,12 +7,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap"
         rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script id="tailwind-config">
@@ -66,9 +61,7 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
+        /* removed material-symbols styles */
 
         .glass-panel {
             background: rgba(245, 240, 216, 0.85);
@@ -494,7 +487,7 @@
 
                 <!-- Hamburger (mobile only) -->
                 <button onclick="openDrawer()" class="flex md:hidden items-center justify-center w-10 h-10 rounded-lg border border-primary/20 text-primary bg-transparent">
-                    <span class="material-symbols-outlined">menu</span>
+                    <i class="fa-solid fa-bars"></i>
                 </button>
 
                 <!-- Desktop: Left Links -->
@@ -531,26 +524,26 @@
         <div class="flex items-center justify-between px-6 py-5 border-b border-primary/10">
             <span class="text-2xl font-extrabold tracking-tighter italic text-primary">LOK ERP</span>
             <button onclick="closeDrawer()" class="w-9 h-9 flex items-center justify-center rounded-lg border border-outline-variant text-on-surface-variant hover:text-primary hover:border-primary transition-all">
-                <span class="material-symbols-outlined text-xl">close</span>
+                <i class="fa-solid fa-xmark text-xl"></i>
             </button>
         </div>
 
         <!-- Drawer Links -->
         <nav class="flex flex-col gap-1 px-4 py-6 flex-1">
             <a href="#home"      onclick="closeDrawer()" class="flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-sm text-on-surface hover:text-secondary hover:bg-primary/8 transition-all no-underline group">
-                <span class="material-symbols-outlined text-primary/60 group-hover:text-secondary text-xl transition-colors">home</span>
+                <i class="fa-solid fa-house text-primary/60 group-hover:text-secondary text-xl transition-colors"></i>
                 الرئيسية
             </a>
             <a href="#features"  onclick="closeDrawer()" class="flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-sm text-on-surface-variant hover:text-secondary hover:bg-primary/8 transition-all no-underline group">
-                <span class="material-symbols-outlined text-primary/60 group-hover:text-secondary text-xl transition-colors">star</span>
+                <i class="fa-solid fa-star text-primary/60 group-hover:text-secondary text-xl transition-colors"></i>
                 المميزات
             </a>
             <a href="#solutions" onclick="closeDrawer()" class="flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-sm text-on-surface-variant hover:text-secondary hover:bg-primary/8 transition-all no-underline group">
-                <span class="material-symbols-outlined text-primary/60 group-hover:text-secondary text-xl transition-colors">grid_view</span>
+                <i class="fa-solid fa-grip text-primary/60 group-hover:text-secondary text-xl transition-colors"></i>
                 الحلول
             </a>
             <a href="#contact"   onclick="closeDrawer()" class="flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-sm text-on-surface-variant hover:text-secondary hover:bg-primary/8 transition-all no-underline group">
-                <span class="material-symbols-outlined text-primary/60 group-hover:text-secondary text-xl transition-colors">mail</span>
+                <i class="fa-solid fa-envelope text-primary/60 group-hover:text-secondary text-xl transition-colors"></i>
                 تواصل معنا
             </a>
         </nav>
@@ -605,7 +598,7 @@
                     <div class="flex justify-center mb-10 md:mb-16 animate-fade-in-up animation-delay-600 px-4 sm:px-0">
                         <a href="#contact" class="group relative px-6 md:px-10 py-3 md:py-5 bg-primary text-on-primary font-bold rounded-xl overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(111,220,140,0.6)] no-underline inline-flex items-center gap-3">
                             ابدأ الآن مجاناً
-                            <span class="material-symbols-outlined group-hover:translate-x-[-4px] transition-transform">arrow_back</span>
+                            <i class="fa-solid fa-arrow-right group-hover:translate-x-[-4px] transition-transform"></i>
                             <div class="absolute inset-0 bg-gradient-to-r from-primary-dim to-primary-container opacity-0 group-hover:opacity-100 transition-opacity"></div>
                         </a>
                     </div>
@@ -636,7 +629,7 @@
                     <div class="glass-panel p-4 rounded-xl border border-primary/30 shadow-[0_0_30px_rgba(111,220,140,0.2)] max-w-[200px]">
                         <div class="flex items-center gap-3">
                             <div class="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center">
-                                <span class="material-symbols-outlined text-primary text-xl">speed</span>
+                                <i class="fa-solid fa-gauge-high text-primary text-xl"></i>
                             </div>
                             <div>
                                 <div class="text-xs text-on-surface-variant">سرعة معالجة</div>
@@ -650,7 +643,7 @@
                     <div class="glass-panel p-4 rounded-xl border border-secondary/30 shadow-[0_0_30px_rgba(255,138,128,0.2)] max-w-[200px]">
                         <div class="flex items-center gap-3">
                             <div class="w-10 h-10 bg-secondary/20 rounded-lg flex items-center justify-center">
-                                <span class="material-symbols-outlined text-secondary text-xl">security</span>
+                                <i class="fa-solid fa-shield-halved text-secondary text-xl"></i>
                             </div>
                             <div>
                                 <div class="text-xs text-on-surface-variant">أمان متقدم</div>
@@ -664,7 +657,7 @@
                     <div class="glass-panel p-4 rounded-xl border border-tertiary/30 shadow-[0_0_30px_rgba(255,213,79,0.2)] max-w-[200px]">
                         <div class="flex items-center gap-3">
                             <div class="w-10 h-10 bg-tertiary/20 rounded-lg flex items-center justify-center">
-                                <span class="material-symbols-outlined text-tertiary text-xl">psychology</span>
+                                <i class="fa-solid fa-brain text-tertiary text-xl"></i>
                             </div>
                             <div>
                                 <div class="text-xs text-on-surface-variant">اكثر من دول</div>
@@ -679,7 +672,7 @@
             <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
                 <div class="flex flex-col items-center gap-2">
                     <span class="text-xs text-on-surface-variant font-bold">اكتشف المزيد</span>
-                    <span class="material-symbols-outlined text-primary text-3xl">keyboard_arrow_down</span>
+                    <i class="fa-solid fa-chevron-down text-primary text-3xl"></i>
                 </div>
             </div>
         </section>
@@ -709,7 +702,7 @@
                     <!-- CRM -->
                     <div class="glass-panel p-6 rounded-xl border border-outline-variant/20 hover:border-primary/50 transition-all duration-300 group hover:scale-105 hover:shadow-[0_20px_60px_rgba(111,220,140,0.3)] w-[350px] flex-shrink-0">
                         <div class="w-14 h-14 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center mb-4 text-primary group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                            <span class="material-symbols-outlined text-3xl">person_search</span>
+                            <i class="fa-solid fa-magnifying-glass-arrow-right text-3xl"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-2 text-on-surface">نظام CRM</h3>
                         <p class="text-on-surface-variant text-sm leading-relaxed mb-3">
@@ -725,7 +718,7 @@
                     <!-- HR -->
                     <div class="glass-panel p-6 rounded-xl border border-outline-variant/20 hover:border-secondary/50 transition-all duration-300 group hover:scale-105 hover:shadow-[0_20px_60px_rgba(255,138,128,0.3)] w-[350px] flex-shrink-0">
                         <div class="w-14 h-14 bg-gradient-to-br from-secondary/20 to-secondary/10 rounded-xl flex items-center justify-center mb-4 text-secondary group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                            <span class="material-symbols-outlined text-3xl">badge</span>
+                            <i class="fa-solid fa-id-badge text-3xl"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-2 text-on-surface">نظام HR</h3>
                         <p class="text-on-surface-variant text-sm leading-relaxed mb-3">
@@ -741,7 +734,7 @@
                     <!-- Finance -->
                     <div class="glass-panel p-6 rounded-xl border border-outline-variant/20 hover:border-tertiary/50 transition-all duration-300 group hover:scale-105 hover:shadow-[0_20px_60px_rgba(255,213,79,0.3)] w-[350px] flex-shrink-0">
                         <div class="w-14 h-14 bg-gradient-to-br from-tertiary/20 to-tertiary/10 rounded-xl flex items-center justify-center mb-4 text-tertiary group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                            <span class="material-symbols-outlined text-3xl">account_balance</span>
+                            <i class="fa-solid fa-building-columns text-3xl"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-2 text-on-surface">الإدارة المالية</h3>
                         <p class="text-on-surface-variant text-sm leading-relaxed mb-3">
@@ -757,7 +750,7 @@
                     <!-- Inventory -->
                     <div class="glass-panel p-6 rounded-xl border border-outline-variant/20 hover:border-primary-dim/50 transition-all duration-300 group hover:scale-105 hover:shadow-[0_20px_60px_rgba(91,201,120,0.3)] w-[350px] flex-shrink-0">
                         <div class="w-14 h-14 bg-gradient-to-br from-primary-dim/20 to-primary-dim/10 rounded-xl flex items-center justify-center mb-4 text-primary-dim group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                            <span class="material-symbols-outlined text-3xl">inventory</span>
+                            <i class="fa-solid fa-boxes-stacked text-3xl"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-2 text-on-surface">إدارة المخزون</h3>
                         <p class="text-on-surface-variant text-sm leading-relaxed mb-3">
@@ -773,7 +766,7 @@
                     <!-- Analytics -->
                     <div class="glass-panel p-6 rounded-xl border border-outline-variant/20 hover:border-primary/50 transition-all duration-300 group hover:scale-105 hover:shadow-[0_20px_60px_rgba(111,220,140,0.3)] w-[350px] flex-shrink-0">
                         <div class="w-14 h-14 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center mb-4 text-primary group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                            <span class="material-symbols-outlined text-3xl">analytics</span>
+                            <i class="fa-solid fa-chart-line text-3xl"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-2 text-on-surface">تقارير ذكية</h3>
                         <p class="text-on-surface-variant text-sm leading-relaxed mb-3">
@@ -789,7 +782,7 @@
                     <!-- Project Management -->
                     <div class="glass-panel p-6 rounded-xl border border-outline-variant/20 hover:border-secondary/50 transition-all duration-300 group hover:scale-105 hover:shadow-[0_20px_60px_rgba(255,138,128,0.3)] w-[350px] flex-shrink-0">
                         <div class="w-14 h-14 bg-gradient-to-br from-secondary/20 to-secondary/10 rounded-xl flex items-center justify-center mb-4 text-secondary group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                            <span class="material-symbols-outlined text-3xl">task_alt</span>
+                            <i class="fa-solid fa-list-check text-3xl"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-2 text-on-surface">إدارة المشاريع</h3>
                         <p class="text-on-surface-variant text-sm leading-relaxed mb-3">
@@ -808,7 +801,7 @@
                                 <!-- Repeat all 6 cards here for seamless loop -->
                                 <div class="glass-panel p-8 rounded-xl border border-outline-variant/20 hover:border-primary/50 transition-all duration-300 group hover:scale-105 hover:shadow-[0_20px_60px_rgba(111,220,140,0.3)] w-[380px] flex-shrink-0">
                                     <div class="w-16 h-16 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                                        <span class="material-symbols-outlined text-4xl">person_search</span>
+                                        <i class="fa-solid fa-magnifying-glass-arrow-right text-4xl"></i>
                                     </div>
                                     <h3 class="text-2xl font-bold mb-3 text-on-surface">نظام CRM</h3>
                                     <p class="text-on-surface-variant text-sm leading-relaxed mb-4">إدارة علاقات العملاء بذكاء - تتبع التفاعلات، تحليل السلوك، وزيادة المبيعات من خلال منصة موحدة</p>
@@ -819,7 +812,7 @@
                                 </div>
                                 <div class="glass-panel p-8 rounded-xl border border-outline-variant/20 hover:border-secondary/50 transition-all duration-300 group hover:scale-105 hover:shadow-[0_20px_60px_rgba(255,138,128,0.3)] w-[380px] flex-shrink-0">
                                     <div class="w-16 h-16 bg-gradient-to-br from-secondary/20 to-secondary/10 rounded-xl flex items-center justify-center mb-6 text-secondary group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                                        <span class="material-symbols-outlined text-4xl">badge</span>
+                                        <i class="fa-solid fa-id-badge text-4xl"></i>
                                     </div>
                                     <h3 class="text-2xl font-bold mb-3 text-on-surface">نظام HR</h3>
                                     <p class="text-on-surface-variant text-sm leading-relaxed mb-4">إدارة الموارد البشرية الشاملة - من التوظيف والحضور إلى الرواتب والتقييم الوظيفي بكل سهولة</p>
@@ -830,7 +823,7 @@
                                 </div>
                                 <div class="glass-panel p-8 rounded-xl border border-outline-variant/20 hover:border-tertiary/50 transition-all duration-300 group hover:scale-105 hover:shadow-[0_20px_60px_rgba(255,213,79,0.3)] w-[380px] flex-shrink-0">
                                     <div class="w-16 h-16 bg-gradient-to-br from-tertiary/20 to-tertiary/10 rounded-xl flex items-center justify-center mb-6 text-tertiary group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                                        <span class="material-symbols-outlined text-4xl">account_balance</span>
+                                        <i class="fa-solid fa-building-columns text-4xl"></i>
                                     </div>
                                     <h3 class="text-2xl font-bold mb-3 text-on-surface">الإدارة المالية</h3>
                                     <p class="text-on-surface-variant text-sm leading-relaxed mb-4">أتمتة كاملة للمحاسبة والتقارير المالية - من الفواتير إلى التقارير الضريبية بدقة عالية</p>
@@ -841,7 +834,7 @@
                                 </div>
                                 <div class="glass-panel p-8 rounded-xl border border-outline-variant/20 hover:border-primary-dim/50 transition-all duration-300 group hover:scale-105 hover:shadow-[0_20px_60px_rgba(91,201,120,0.3)] w-[380px] flex-shrink-0">
                                     <div class="w-16 h-16 bg-gradient-to-br from-primary-dim/20 to-primary-dim/10 rounded-xl flex items-center justify-center mb-6 text-primary-dim group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                                        <span class="material-symbols-outlined text-4xl">inventory</span>
+                                        <i class="fa-solid fa-boxes-stacked text-4xl"></i>
                                     </div>
                                     <h3 class="text-2xl font-bold mb-3 text-on-surface">إدارة المخزون</h3>
                                     <p class="text-on-surface-variant text-sm leading-relaxed mb-4">تحكم كامل في المخزون والمشتريات - تتبع المنتجات، إدارة الموردين، وتحسين سلسلة الإمداد</p>
@@ -852,7 +845,7 @@
                                 </div>
                                 <div class="glass-panel p-8 rounded-xl border border-outline-variant/20 hover:border-primary/50 transition-all duration-300 group hover:scale-105 hover:shadow-[0_20px_60px_rgba(111,220,140,0.3)] w-[380px] flex-shrink-0">
                                     <div class="w-16 h-16 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                                        <span class="material-symbols-outlined text-4xl">analytics</span>
+                                        <i class="fa-solid fa-chart-line text-4xl"></i>
                                     </div>
                                     <h3 class="text-2xl font-bold mb-3 text-on-surface">تقارير ذكية</h3>
                                     <p class="text-on-surface-variant text-sm leading-relaxed mb-4">لوحة تحكم تعطيك رؤية شاملة عن أداء الشركة، المبيعات، والأرباح بضغطة زر واحدة</p>
@@ -863,7 +856,7 @@
                                 </div>
                                 <div class="glass-panel p-8 rounded-xl border border-outline-variant/20 hover:border-secondary/50 transition-all duration-300 group hover:scale-105 hover:shadow-[0_20px_60px_rgba(255,138,128,0.3)] w-[380px] flex-shrink-0">
                                     <div class="w-16 h-16 bg-gradient-to-br from-secondary/20 to-secondary/10 rounded-xl flex items-center justify-center mb-6 text-secondary group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                                        <span class="material-symbols-outlined text-4xl">task_alt</span>
+                                        <i class="fa-solid fa-list-check text-4xl"></i>
                                     </div>
                                     <h3 class="text-2xl font-bold mb-3 text-on-surface">إدارة المشاريع</h3>
                                     <p class="text-on-surface-variant text-sm leading-relaxed mb-4">تخطيط وتنفيذ المشاريع بكفاءة - تتبع المهام، إدارة الفرق، ومراقبة التقدم في الوقت الفعلي</p>
@@ -911,7 +904,7 @@
                         </div>
                         <div class="glass-panel px-4 py-2 rounded-lg border border-secondary/30 backdrop-blur-xl animate-fade-in-up animation-delay-200">
                             <div class="flex items-center gap-2">
-                                <span class="material-symbols-outlined text-secondary text-sm">bolt</span>
+                                <i class="fa-solid fa-bolt text-secondary text-sm"></i>
                                 <span class="text-sm font-bold text-on-surface">استجابة فورية</span>
                             </div>
                         </div>
@@ -922,21 +915,21 @@
                 <div class="grid md:grid-cols-3 gap-6 mt-12 max-w-5xl mx-auto">
                     <div class="text-center p-6">
                         <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-                            <span class="material-symbols-outlined text-primary text-3xl">touch_app</span>
+                            <i class="fa-solid fa-hand-pointer text-primary text-3xl"></i>
                         </div>
                         <h4 class="font-bold text-lg mb-2">سهولة الاستخدام</h4>
                         <p class="text-sm text-on-surface-variant">واجهة بديهية لا تحتاج تدريب معقد</p>
                     </div>
                     <div class="text-center p-6">
                         <div class="w-14 h-14 bg-secondary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-                            <span class="material-symbols-outlined text-secondary text-3xl">devices</span>
+                            <i class="fa-solid fa-laptop-mobile text-secondary text-3xl"></i>
                         </div>
                         <h4 class="font-bold text-lg mb-2">متوافق مع كل الأجهزة</h4>
                         <p class="text-sm text-on-surface-variant">اعمل من أي مكان على أي جهاز</p>
                     </div>
                     <div class="text-center p-6">
                         <div class="w-14 h-14 bg-tertiary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-                            <span class="material-symbols-outlined text-tertiary text-3xl">palette</span>
+                            <i class="fa-solid fa-palette text-tertiary text-3xl"></i>
                         </div>
                         <h4 class="font-bold text-lg mb-2">تخصيص كامل</h4>
                         <p class="text-sm text-on-surface-variant">صمم لوحة التحكم حسب احتياجاتك</p>
@@ -955,7 +948,7 @@
                 <!-- Left: Text -->
                 <div data-reveal="right">
                     <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/30 text-secondary font-bold text-xs uppercase mb-6">
-                        <span class="material-symbols-outlined text-sm">verified_user</span>
+                        <i class="fa-solid fa-user-shield text-sm"></i>
                         أمان بمستوى عسكري
                     </span>
                     <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
@@ -968,7 +961,7 @@
                     <div class="space-y-6">
                         <div class="flex gap-4 group">
                             <div class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                                <span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">lock</span>
+                                <i class="fa-solid fa-lock text-primary text-2xl"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold text-lg mb-1">تشفير البيانات (AES-256)</h4>
@@ -978,7 +971,7 @@
 
                         <div class="flex gap-4 group">
                             <div class="flex-shrink-0 w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                                <span class="material-symbols-outlined text-secondary text-2xl" style="font-variation-settings: 'FILL' 1;">manage_accounts</span>
+                                <i class="fa-solid fa-user-gear text-secondary text-2xl"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold text-lg mb-1">إدارة الصلاحيات</h4>
@@ -988,7 +981,7 @@
 
                         <div class="flex gap-4 group">
                             <div class="flex-shrink-0 w-12 h-12 bg-tertiary/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                                <span class="material-symbols-outlined text-tertiary text-2xl" style="font-variation-settings: 'FILL' 1;">backup</span>
+                                <i class="fa-solid fa-cloud-arrow-up text-tertiary text-2xl"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold text-lg mb-1">نسخ احتياطي واستعادة</h4>
@@ -998,7 +991,7 @@
 
                         <div class="flex gap-4 group">
                             <div class="flex-shrink-0 w-12 h-12 bg-primary-dim/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                                <span class="material-symbols-outlined text-primary-dim text-2xl" style="font-variation-settings: 'FILL' 1;">monitoring</span>
+                                <i class="fa-solid fa-chart-bar text-primary-dim text-2xl"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold text-lg mb-1">مراقبة وتسجيل العمليات</h4>
@@ -1008,7 +1001,7 @@
 
                         <div class="flex gap-4 group">
                             <div class="flex-shrink-0 w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                                <span class="material-symbols-outlined text-secondary text-2xl" style="font-variation-settings: 'FILL' 1;">shield</span>
+                                <i class="fa-solid fa-shield text-secondary text-2xl"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold text-lg mb-1">حماية الطلبات والجلسات</h4>
@@ -1023,8 +1016,7 @@
                     <div class="aspect-square bg-gradient-to-br from-primary/30 via-secondary/20 to-tertiary/30 rounded-full animate-pulse-slow absolute inset-0 blur-[100px]"></div>
                     <div class="relative glass-panel p-16 rounded-2xl border border-primary/20 flex items-center justify-center group hover:border-primary/50 transition-all">
                         <div class="relative">
-                            <span class="material-symbols-outlined text-[180px] text-primary drop-shadow-[0_0_50px_rgba(111,220,140,0.6)] group-hover:scale-110 transition-transform duration-500"
-                                style="font-variation-settings: 'FILL' 1;">shield_lock</span>
+                            <i class="fa-solid fa-shield-halved text-[180px] text-primary drop-shadow-[0_0_50px_rgba(111,220,140,0.6)] group-hover:scale-110 transition-transform duration-500"></i>
                             <div class="absolute -top-4 -right-4 glass-panel px-3 py-2 rounded-lg border border-secondary/30 animate-float">
                                 <div class="text-xs font-bold text-secondary">AES-256</div>
                             </div>
@@ -1178,7 +1170,7 @@
                 <div class="position-relative">
                     <!-- Prev Button -->
                     <button onclick="prevSlide()" class="position-absolute start-0 top-50 translate-middle-y z-20 d-flex align-items-center justify-content-center shadow-lg border-2 border-primary/30 bg-white hover:bg-primary transition-all group rounded-circle" style="width:48px;height:48px;margin-top:-20px;z-index:20;">
-                        <span class="material-symbols-outlined text-primary">chevron_right</span>
+                        <i class="fa-solid fa-chevron-left text-primary"></i>
                     </button>
 
                     <!-- Slider: desktop (md+) uses 3-card layout, mobile shows 1 card -->
@@ -1199,7 +1191,7 @@
 
                     <!-- Next Button -->
                     <button onclick="nextSlide()" class="position-absolute end-0 top-50 translate-middle-y z-20 d-flex align-items-center justify-content-center shadow-lg border-2 border-primary/30 bg-white hover:bg-primary transition-all group rounded-circle" style="width:48px;height:48px;margin-top:-20px;z-index:20;">
-                        <span class="material-symbols-outlined text-primary">chevron_left</span>
+                        <i class="fa-solid fa-chevron-right text-primary"></i>
                     </button>
                 </div>
 
@@ -1241,7 +1233,7 @@
                         <div class="grid md:grid-cols-2 gap-6">
                             <div class="space-y-2">
                                 <label class="text-xs font-bold text-primary uppercase tracking-wider flex items-center gap-2">
-                                    <span class="material-symbols-outlined text-sm">person</span>
+                                    <i class="fa-solid fa-user text-sm"></i>
                                     الاسم الكامل
                                 </label>
                                 <input id="contactName"
@@ -1250,7 +1242,7 @@
                             </div>
                             <div class="space-y-2">
                                 <label class="text-xs font-bold text-primary uppercase tracking-wider flex items-center gap-2">
-                                    <span class="material-symbols-outlined text-sm">mail</span>
+                                    <i class="fa-solid fa-envelope text-sm"></i>
                                     البريد الإلكتروني
                                 </label>
                                 <input id="contactEmail"
@@ -1262,7 +1254,7 @@
                         <div class="grid md:grid-cols-2 gap-6">
                             <div class="space-y-2">
                                 <label class="text-xs font-bold text-primary uppercase tracking-wider flex items-center gap-2">
-                                    <span class="material-symbols-outlined text-sm">business</span>
+                                    <i class="fa-solid fa-building text-sm"></i>
                                     حجم الشركة
                                 </label>
                                 <select id="contactCompany"
@@ -1275,7 +1267,7 @@
                             </div>
                             <div class="space-y-2">
                                 <label class="text-xs font-bold text-primary uppercase tracking-wider flex items-center gap-2">
-                                    <span class="material-symbols-outlined text-sm">call</span>
+                                    <i class="fa-solid fa-phone text-sm"></i>
                                     رقم الهاتف
                                 </label>
                                 <input id="contactPhone"
@@ -1286,7 +1278,7 @@
 
                         <div class="space-y-2">
                             <label class="text-xs font-bold text-primary uppercase tracking-wider flex items-center gap-2">
-                                <span class="material-symbols-outlined text-sm">chat</span>
+                                <i class="fa-solid fa-comment text-sm"></i>
                                 رسالتك
                             </label>
                             <textarea id="contactMessage"
@@ -1298,7 +1290,7 @@
                             type="submit"
                             class="w-full py-4 bg-gradient-to-r from-primary via-primary-dim to-primary-container text-on-primary font-bold text-lg rounded-xl hover:scale-[1.02] active:scale-[0.98] transition-all shadow-[0_10px_40px_rgba(111,220,140,0.3)] flex items-center justify-center gap-3 group">
                             <span>إرسال الطلب</span>
-                            <span class="material-symbols-outlined group-hover:translate-x-[-4px] transition-transform">send</span>
+                            <i class="fa-solid fa-paper-plane group-hover:translate-x-[-4px] transition-transform"></i>
                         </button>
                     </form>
                 </div>
@@ -1322,13 +1314,13 @@
                     <!-- Social Icons -->
                     <div class="flex gap-3 pt-2">
                         <a href="#" class="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all group">
-                            <span class="material-symbols-outlined text-primary group-hover:text-on-primary text-lg transition-colors">mail</span>
+                            <i class="fa-solid fa-envelope text-primary group-hover:text-on-primary text-lg transition-colors"></i>
                         </a>
                         <a href="#" class="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all group">
-                            <span class="material-symbols-outlined text-primary group-hover:text-on-primary text-lg transition-colors">call</span>
+                            <i class="fa-solid fa-phone text-primary group-hover:text-on-primary text-lg transition-colors"></i>
                         </a>
                         <a href="#" class="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all group">
-                            <span class="material-symbols-outlined text-primary group-hover:text-on-primary text-lg transition-colors">language</span>
+                            <i class="fa-solid fa-globe text-primary group-hover:text-on-primary text-lg transition-colors"></i>
                         </a>
                     </div>
                 </div>
@@ -1339,16 +1331,16 @@
                         <h4 class="text-surface font-bold text-sm uppercase tracking-widest border-b border-primary/30 pb-2">الروابط السريعة</h4>
                         <ul class="space-y-3">
                             <li><a href="#" class="text-outline hover:text-primary transition-colors text-sm flex items-center gap-2 group">
-                                <span class="material-symbols-outlined text-sm text-primary/50 group-hover:text-primary transition-colors">chevron_left</span>من نحن
+                                <i class="fa-solid fa-chevron-right text-sm text-primary/50 group-hover:text-primary transition-colors"></i>من نحن
                             </a></li>
                             <li><a href="#" class="text-outline hover:text-primary transition-colors text-sm flex items-center gap-2 group">
-                                <span class="material-symbols-outlined text-sm text-primary/50 group-hover:text-primary transition-colors">chevron_left</span>المميزات
+                                <i class="fa-solid fa-chevron-right text-sm text-primary/50 group-hover:text-primary transition-colors"></i>المميزات
                             </a></li>
                             <li><a href="#" class="text-outline hover:text-primary transition-colors text-sm flex items-center gap-2 group">
-                                <span class="material-symbols-outlined text-sm text-primary/50 group-hover:text-primary transition-colors">chevron_left</span>الأسعار
+                                <i class="fa-solid fa-chevron-right text-sm text-primary/50 group-hover:text-primary transition-colors"></i>الأسعار
                             </a></li>
                             <li><a href="#" class="text-outline hover:text-primary transition-colors text-sm flex items-center gap-2 group">
-                                <span class="material-symbols-outlined text-sm text-primary/50 group-hover:text-primary transition-colors">chevron_left</span>اتصل بنا
+                                <i class="fa-solid fa-chevron-right text-sm text-primary/50 group-hover:text-primary transition-colors"></i>اتصل بنا
                             </a></li>
                         </ul>
                     </div>
@@ -1357,16 +1349,16 @@
                         <h4 class="text-surface font-bold text-sm uppercase tracking-widest border-b border-secondary/30 pb-2">الدعم</h4>
                         <ul class="space-y-3">
                             <li><a href="#" class="text-outline hover:text-secondary transition-colors text-sm flex items-center gap-2 group">
-                                <span class="material-symbols-outlined text-sm text-secondary/50 group-hover:text-secondary transition-colors">chevron_left</span>سياسة الخصوصية
+                                <i class="fa-solid fa-chevron-right text-sm text-secondary/50 group-hover:text-secondary transition-colors"></i>سياسة الخصوصية
                             </a></li>
                             <li><a href="#" class="text-outline hover:text-secondary transition-colors text-sm flex items-center gap-2 group">
-                                <span class="material-symbols-outlined text-sm text-secondary/50 group-hover:text-secondary transition-colors">chevron_left</span>شروط الخدمة
+                                <i class="fa-solid fa-chevron-right text-sm text-secondary/50 group-hover:text-secondary transition-colors"></i>شروط الخدمة
                             </a></li>
                             <li><a href="#" class="text-outline hover:text-secondary transition-colors text-sm flex items-center gap-2 group">
-                                <span class="material-symbols-outlined text-sm text-secondary/50 group-hover:text-secondary transition-colors">chevron_left</span>الدعم الفني
+                                <i class="fa-solid fa-chevron-right text-sm text-secondary/50 group-hover:text-secondary transition-colors"></i>الدعم الفني
                             </a></li>
                             <li><a href="#" class="text-outline hover:text-secondary transition-colors text-sm flex items-center gap-2 group">
-                                <span class="material-symbols-outlined text-sm text-secondary/50 group-hover:text-secondary transition-colors">chevron_left</span>وثائق API
+                                <i class="fa-solid fa-chevron-right text-sm text-secondary/50 group-hover:text-secondary transition-colors"></i>وثائق API
                             </a></li>
                         </ul>
                     </div>
@@ -1448,9 +1440,9 @@
         function buildStars(count) {
             let html = '';
             for (let i = 0; i < Math.floor(count); i++)
-                html += `<span class="material-symbols-outlined text-[#ffd54f] text-lg" style="font-variation-settings:'FILL' 1;">star</span>`;
+                html += `<i class="fa-solid fa-star" style="color:#F5A84B;font-size:1.1rem;"></i>`;
             if (count % 1 !== 0)
-                html += `<span class="material-symbols-outlined text-[#ffd54f] text-lg" style="font-variation-settings:'FILL' 1;">star_half</span>`;
+                html += `<i class="fa-solid fa-star-half-stroke" style="color:#F5A84B;font-size:1.1rem;"></i>`;
             return html;
         }
 
