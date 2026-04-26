@@ -883,7 +883,7 @@
                         <img alt="LOK ERP Interface"
                             class="w-full transform scale-100 group-hover:scale-105 transition-transform duration-700 ease-out"
                             data-alt="high-tech dark themed ERP dashboard interface on a desktop screen with neon glowing charts maps and data visualizations"
-                            src="{{ asset('images/massarImage.jpg') }}" />
+                            src="{{ asset('images/massarImage.WebP') }}" />
                     </div>
                     
                     <!-- Feature Highlights -->
@@ -1065,32 +1065,32 @@
                     <div class="relative w-full max-w-4xl aspect-square hidden md:block">
                         <div class="absolute top-0 left-1/2 -translate-x-1/2 animate-float">
                             <div class="glass-panel w-24 h-24 border border-primary/20 rounded-xl flex items-center justify-center hover:border-primary/50 hover:scale-110 transition-all shadow-lg">
-                                <img alt="Mazadi" class="w-12 h-12" src="{{ asset('/images/mazadi.png') }}" />
+                                <img alt="Mazadi" class="w-12 h-12" src="{{ asset('/images/mazadi.WebP') }}" />
                             </div>
                         </div>
                         <div class="absolute top-[15%] right-[10%] animate-float-delayed">
                             <div class="glass-panel w-24 h-24 border border-secondary/20 rounded-xl flex items-center justify-center hover:border-secondary/50 hover:scale-110 transition-all shadow-lg">
-                                <img alt="Khadamat" class="w-12 h-12" src="{{ asset('/images/khadamat.png') }}" />
+                                <img alt="Khadamat" class="w-12 h-12" src="{{ asset('/images/khadamat.WebP') }}" />
                             </div>
                         </div>
                         <div class="absolute top-[15%] left-[10%] animate-float">
                             <div class="glass-panel w-24 h-24 border border-tertiary/20 rounded-xl flex items-center justify-center hover:border-tertiary/50 hover:scale-110 transition-all shadow-lg">
-                                <img alt="Gas" class="w-12 h-12" src="{{ asset('/images/gas.png') }}" />
+                                <img alt="Gas" class="w-12 h-12" src="{{ asset('/images/gas.WebP') }}" />
                             </div>
                         </div>
                         <div class="absolute bottom-0 left-1/2 -translate-x-1/2 animate-float-delayed">
                             <div class="glass-panel w-24 h-24 border border-primary/20 rounded-xl flex items-center justify-center hover:border-primary/50 hover:scale-110 transition-all shadow-lg">
-                                <img alt="Massar" class="w-12 h-12" src="{{ asset('/images/massarImage.jpg') }}" />
+                                <img alt="Massar" class="w-12 h-12" src="{{ asset('/images/massarImage.WebP') }}" />
                             </div>
                         </div>
                         <div class="absolute bottom-[15%] right-[10%] animate-float">
                             <div class="glass-panel w-24 h-24 border border-secondary/20 rounded-xl flex items-center justify-center hover:border-secondary/50 hover:scale-110 transition-all shadow-lg">
-                                <img alt="Academy" class="w-12 h-12" src="{{ asset('/images/academy.jpeg') }}" />
+                                <img alt="Academy" class="w-12 h-12" src="{{ asset('/images/academy.WebP') }}" />
                             </div>
                         </div>
                         <div class="absolute bottom-[15%] left-[10%] animate-float-delayed">
                             <div class="glass-panel w-24 h-24 border border-tertiary/20 rounded-xl flex items-center justify-center hover:border-tertiary/50 hover:scale-110 transition-all shadow-lg">
-                                <img alt="Kody" class="w-12 h-12 rounded-lg" src="{{ asset('/images/kody.jpeg') }}" />
+                                <img alt="Kody" class="w-12 h-12 rounded-lg" src="{{ asset('/images/kody.WebP') }}" />
                             </div>
                         </div>
                     </div>
@@ -1106,22 +1106,22 @@
                         <!-- 3x2 grid -->
                         <div class="grid grid-cols-3 gap-4 max-w-xs mx-auto">
                             <div class="glass-panel p-3 rounded-xl border border-primary/20 flex items-center justify-center aspect-square hover:scale-105 transition-all shadow-md">
-                                <img alt="Mazadi" class="w-10 h-10 object-contain" src="{{ asset('/images/mazadi.png') }}" />
+                                <img alt="Mazadi" class="w-10 h-10 object-contain" src="{{ asset('/images/mazadi.WebP') }}" />
                             </div>
                             <div class="glass-panel p-3 rounded-xl border border-secondary/20 flex items-center justify-center aspect-square hover:scale-105 transition-all shadow-md">
-                                <img alt="Khadamat" class="w-10 h-10 object-contain" src="{{ asset('/images/khadamat.png') }}" />
+                                <img alt="Khadamat" class="w-10 h-10 object-contain" src="{{ asset('/images/khadamat.WebP') }}" />
                             </div>
                             <div class="glass-panel p-3 rounded-xl border border-tertiary/20 flex items-center justify-center aspect-square hover:scale-105 transition-all shadow-md">
-                                <img alt="Gas" class="w-10 h-10 object-contain" src="{{ asset('/images/gas.png') }}" />
+                                <img alt="Gas" class="w-10 h-10 object-contain" src="{{ asset('/images/gas.WebP') }}" />
                             </div>
                             <div class="glass-panel p-3 rounded-xl border border-primary/20 flex items-center justify-center aspect-square hover:scale-105 transition-all shadow-md">
-                                <img alt="Massar" class="w-10 h-10 object-contain rounded-lg" src="{{ asset('/images/massarImage.jpg') }}" />
+                                <img alt="Massar" class="w-10 h-10 object-contain rounded-lg" src="{{ asset('/images/massarImage.WebP') }}" />
                             </div>
                             <div class="glass-panel p-3 rounded-xl border border-secondary/20 flex items-center justify-center aspect-square hover:scale-105 transition-all shadow-md">
-                                <img alt="Academy" class="w-10 h-10 object-contain rounded-lg" src="{{ asset('/images/academy.jpeg') }}" />
+                                <img alt="Academy" class="w-10 h-10 object-contain rounded-lg" src="{{ asset('/images/academy.WebP') }}" />
                             </div>
                             <div class="glass-panel p-3 rounded-xl border border-tertiary/20 flex items-center justify-center aspect-square hover:scale-105 transition-all shadow-md">
-                                <img alt="Kody" class="w-10 h-10 object-contain rounded-lg" src="{{ asset('/images/kody.jpeg') }}" />
+                                <img alt="Kody" class="w-10 h-10 object-contain rounded-lg" src="{{ asset('/images/kody.WebP') }}" />
                             </div>
                         </div>
                     </div>
