@@ -362,7 +362,7 @@
         }
 
         /* ===== Scroll Reveal Animations ===== */
-        [data-reveal] { opacity: 0; }
+        [data-reveal] { opacity: 0; will-change: transform, opacity; }
         [data-reveal="up"]    { transform: translateY(60px); }
         [data-reveal="down"]  { transform: translateY(-60px); }
         [data-reveal="left"]  { transform: translateX(80px); }
@@ -586,7 +586,7 @@
 
                     <!-- Subheading -->
                     <p class="text-lg md:text-3xl font-bold text-on-surface mb-4 animate-fade-in-up animation-delay-200">
-                       Logistic of knowlage.
+                       Logistics Of Knowledge
                     </p>
 
                     <!-- Description -->
@@ -647,7 +647,7 @@
                             </div>
                             <div>
                                 <div class="text-xs text-on-surface-variant">أمان متقدم</div>
-                                <div class="text-lg font-bold text-secondary">256-bit</div>
+                                <div class="text-lg font-bold text-secondary">AES-256</div>
                             </div>
                         </div>
                     </div>
@@ -667,18 +667,10 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Scroll Indicator -->
-            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-                <div class="flex flex-col items-center gap-2">
-                    <span class="text-xs text-on-surface-variant font-bold">اكتشف المزيد</span>
-                    <i class="fa-solid fa-chevron-down text-primary text-3xl"></i>
-                </div>
-            </div>
         </section>
 
         <!-- Core Solutions -->
-        <section id="features" class="py-16 px-8 overflow-hidden ">
+        <section id="features" class="py-10 md:py-16 px-4 md:px-8 overflow-hidden ">
             <div class="container mx-auto">
                 <div class="mb-10 text-center" data-reveal="up">
                     <h2 class="text-4xl font-bold mb-4">حلول مصممة لنموك</h2>
@@ -872,7 +864,7 @@
             </div>
         </section>
         <!-- Dashboard Preview -->
-        <section class="py-20 px-8 overflow-hidden bg-gradient-to-b from-background to-surface-container-low">
+        <section class="py-12 md:py-20 px-4 md:px-8 overflow-hidden bg-gradient-to-b from-background to-surface-container-low">
             <div class="container mx-auto">
                 <div class="text-center mb-16" data-reveal="up">
                     <span class="text-primary font-bold tracking-widest text-xs uppercase mb-4 block">واجهة المستخدم</span>
@@ -938,15 +930,14 @@
             </div>
         </section>
         <!-- Security & Privacy -->
-        <!-- Security & Privacy -->
-        <section class="py-20 px-8 bg-surface-container-low relative overflow-hidden">
+        <section class="py-12 md:py-20 px-4 md:px-8 bg-surface-container-low relative overflow-hidden">
             <div class="absolute inset-0 opacity-5">
                 <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent"></div>
             </div>
 
-            <div class="container mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
+            <div class="container mx-auto grid lg:grid-cols-2 gap-10 md:gap-16 items-center relative z-10">
                 <!-- Left: Text -->
-                <div data-reveal="right">
+                <div data-reveal="up">
                     <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/30 text-secondary font-bold text-xs uppercase mb-6">
                         <i class="fa-solid fa-user-shield text-sm"></i>
                         أمان بمستوى عسكري
@@ -1012,7 +1003,7 @@
                 </div>
 
                 <!-- Right: Visual -->
-                <div class="relative" data-reveal="left" data-reveal-delay="200">
+                <div class="relative hidden lg:block" data-reveal="up" data-reveal-delay="200">
                     <div class="aspect-square bg-gradient-to-br from-primary/30 via-secondary/20 to-tertiary/30 rounded-full animate-pulse-slow absolute inset-0 blur-[100px]"></div>
                     <div class="relative glass-panel p-16 rounded-2xl border border-primary/20 flex items-center justify-center group hover:border-primary/50 transition-all">
                         <div class="relative">
@@ -1029,7 +1020,7 @@
             </div>
         </section>
         <!-- Global Integrations -->
-        <section id="solutions" class="py-20 px-8 relative overflow-hidden">
+        <section id="solutions" class="py-12 md:py-20 px-4 md:px-8 relative overflow-hidden">
             <!-- Background Elements -->
             <div class="absolute inset-0">
                 <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px] animate-pulse-slow"></div>
@@ -1154,7 +1145,7 @@
             </div>
         </section>
         <!-- Testimonials -->
-        <section class="py-20 px-8 bg-gradient-to-b from-surface-container-low/30 to-background overflow-hidden">
+        <section class="py-12 md:py-20 px-4 md:px-8 bg-gradient-to-b from-surface-container-low/30 to-background overflow-hidden">
             <div class="container mx-auto">
                 <div class="text-center mb-16" data-reveal="up">
                     <span class="inline-block px-4 py-2 rounded-full bg-secondary/10 border border-secondary/30 text-secondary font-bold text-xs uppercase mb-6">
@@ -1167,36 +1158,34 @@
                 </div>
 
                 <!-- Slider Wrapper -->
-                <div class="position-relative">
+                <div class="relative">
                     <!-- Prev Button -->
-                    <button onclick="prevSlide()" class="position-absolute start-0 top-50 translate-middle-y z-20 d-flex align-items-center justify-content-center shadow-lg border-2 border-primary/30 bg-white hover:bg-primary transition-all group rounded-circle" style="width:48px;height:48px;margin-top:-20px;z-index:20;">
-                        <i class="fa-solid fa-chevron-left text-primary"></i>
+                    <button onclick="prevSlide()" class="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white border-2 border-primary/30 flex items-center justify-center shadow-lg hover:bg-primary hover:border-primary transition-all group" style="margin-top:-10px;">
+                        <i class="fa-solid fa-chevron-right text-primary group-hover:text-white transition-colors"></i>
                     </button>
 
-                    <!-- Slider: desktop (md+) uses 3-card layout, mobile shows 1 card -->
-                    <div class="d-none d-md-block">
-                        <div class="relative flex items-center justify-center overflow-hidden mx-14" style="height:340px;" id="testimonialSlider">
-                            <div class="testimonial-card absolute transition-all duration-700 ease-in-out hidden xl:block" data-pos="-2"></div>
-                            <div class="testimonial-card absolute transition-all duration-700 ease-in-out" data-pos="-1"></div>
-                            <div class="testimonial-card absolute transition-all duration-700 ease-in-out" data-pos="0"></div>
-                            <div class="testimonial-card absolute transition-all duration-700 ease-in-out" data-pos="1"></div>
-                            <div class="testimonial-card absolute transition-all duration-700 ease-in-out hidden xl:block" data-pos="2"></div>
-                        </div>
+                    <!-- Desktop: 3-card slider -->
+                    <div class="hidden md:block relative flex items-center justify-center overflow-hidden mx-14" style="height:380px;" id="testimonialSlider">
+                        <div class="testimonial-card absolute hidden xl:block" data-pos="-2"></div>
+                        <div class="testimonial-card absolute" data-pos="-1"></div>
+                        <div class="testimonial-card absolute" data-pos="0"></div>
+                        <div class="testimonial-card absolute" data-pos="1"></div>
+                        <div class="testimonial-card absolute hidden xl:block" data-pos="2"></div>
                     </div>
 
-                    <!-- Slider: mobile shows single card -->
-                    <div class="d-md-none px-3" id="testimonialSliderMobile">
-                        <div class="testimonial-card-mobile" style="transition: opacity 0.5s ease;"></div>
+                    <!-- Mobile: single card -->
+                    <div class="md:hidden mx-2" id="testimonialSliderMobile">
+                        <div class="testimonial-card-mobile" style="transition: opacity 0.4s ease, transform 0.4s ease;"></div>
                     </div>
 
                     <!-- Next Button -->
-                    <button onclick="nextSlide()" class="position-absolute end-0 top-50 translate-middle-y z-20 d-flex align-items-center justify-content-center shadow-lg border-2 border-primary/30 bg-white hover:bg-primary transition-all group rounded-circle" style="width:48px;height:48px;margin-top:-20px;z-index:20;">
-                        <i class="fa-solid fa-chevron-right text-primary"></i>
+                    <button onclick="nextSlide()" class="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white border-2 border-primary/30 flex items-center justify-center shadow-lg hover:bg-primary hover:border-primary transition-all group" style="margin-top:-10px;">
+                        <i class="fa-solid fa-chevron-left text-primary group-hover:text-white transition-colors"></i>
                     </button>
                 </div>
 
                 <!-- Dots -->
-                <div class="flex justify-center gap-3 mt-10" id="testimonialDots"></div>
+                <div class="flex justify-center gap-3 mt-8" id="testimonialDots"></div>
 
                 <!-- Trust Badges -->
                 <div class="flex flex-wrap justify-center items-center gap-8 mt-12 pt-12 border-t border-outline-variant/20">
@@ -1218,7 +1207,7 @@
             </div>
         </section>
         <!-- Contact Journey -->
-        <section id="contact" class="py-20 px-8 bg-gradient-to-b from-background to-surface-container-low">
+        <section id="contact" class="py-12 md:py-20 px-4 md:px-8 bg-gradient-to-b from-background to-surface-container-low">
             <div class="container mx-auto max-w-4xl">
                 <div class="glass-panel p-10 md:p-12 rounded-2xl border border-primary/30 shadow-[0_0_60px_rgba(111,220,140,0.2)]" data-reveal="up">
                     <div class="text-center mb-10">
@@ -1394,212 +1383,214 @@
         // ===== Testimonials Slider =====
         const testimonials = [
             {
-                initial: 'إ', color: 'primary', name: 'إسلام',
-                company: 'شركة المصري', sub: 'عميل منذ 4 سنوات',
+                initial: 'أ', color: 'primary', name: 'أحمد الشريف',
+                company: 'مجموعة الشريف للمقاولات', sub: 'عميل منذ 3 سنوات',
+                role: 'المدير التنفيذي',
                 rating: '10/10', stars: 5,
-                text: '"بقالي أربع سنين شغال عليه وكله تمام، بتقدموا خدمة 100%. بس محتاجين تنتشروا أكتر وتتوسعوا في السوشيال ميديا عشان توصلوا لعدد أكبر من الناس."'
+                text: '"LOK ERP غيّر طريقة إدارتنا بالكامل. كنا نضيع ساعات في التقارير اليدوية، دلوقتي كل حاجة في لحظة. الدعم الفني ممتاز وفريقهم دايماً موجود."'
             },
             {
-                initial: 'م', color: 'secondary', name: 'محمد دراز',
-                company: 'سوبر ماركت ميت حبيب', sub: '',
+                initial: 'س', color: 'secondary', name: 'سارة منصور',
+                company: 'سلسلة صيدليات النور', sub: 'عميل منذ سنتين',
+                role: 'مدير العمليات',
                 rating: '10/10', stars: 5,
-                text: '"البرنامج تمام وكويس وانتو محترمين."'
+                text: '"إدارة المخزون والمبيعات بقت سهلة جداً. النظام بيتكيف مع احتياجاتنا وكل تحديث بيجيب حاجات جديدة مفيدة. أنصح بيه أي شركة تجارية."'
             },
             {
-                initial: 'م', color: 'tertiary', name: 'محمد لاشين',
-                company: 'عدد وآلات المنصورة', sub: '',
-                rating: 'أعلى تقييم', stars: 5,
-                text: '"تجربة سعيدة، البرنامج منتشر والشركة منتشرة."'
+                initial: 'م', color: 'tertiary', name: 'محمد العمري',
+                company: 'مصنع العمري للأغذية', sub: 'عميل منذ 4 سنوات',
+                role: 'مدير المالية',
+                rating: '9.5/10', stars: 5,
+                text: '"التقارير المالية والمحاسبية بقت دقيقة 100%. وفّرنا وقت وجهد كبير جداً في نهاية كل شهر. النظام سهل الاستخدام حتى للموظفين الجدد."'
             },
             {
-                initial: 'م', color: 'primary', name: 'محمود رؤوف',
-                company: 'الجندي ملابس', sub: '',
+                initial: 'ن', color: 'primary', name: 'نورا إبراهيم',
+                company: 'مركز نورا للتجميل', sub: 'عميل منذ سنة',
+                role: 'صاحبة المشروع',
                 rating: '10/10', stars: 5,
-                text: '"البرنامج كويس وأنصح بيه الشركات."'
+                text: '"كنت خايفة إن النظام يكون معقد، بس الفريق ساعدني من أول يوم. دلوقتي بتابع كل حاجة من موبايلي. أفضل قرار اتخذته لمشروعي."'
             },
             {
-                initial: 'ك', color: 'secondary', name: 'مصنع كايرو جراح',
-                company: 'قطاع التصنيع', sub: '',
+                initial: 'ك', color: 'secondary', name: 'كريم طاهر',
+                company: 'شركة طاهر للاستيراد والتصدير', sub: 'عميل منذ سنتين',
+                role: 'مدير المشتريات',
                 rating: '9/10', stars: 4.5,
-                text: '"الشغل كويس، ناجحين بنسبة 80%."'
+                text: '"إدارة الموردين والمشتريات بقت منظمة جداً. بنتابع كل أوردر من لحظة الطلب للاستلام. النظام وفّر علينا خسائر كتير من الأخطاء اليدوية."'
             },
             {
-                initial: 'م', color: 'tertiary', name: 'محمد السيد',
-                company: 'مفروشات الفتح - المنصورة', sub: '',
-                rating: 'ممتاز', stars: 5,
-                text: '"البرنامج ممتاز، العميل راضي تماماً عن النسخة الحالية ولا يوجد لديه أي ملاحظات تقنية."'
+                initial: 'ه', color: 'tertiary', name: 'هاني سلامة',
+                company: 'مجموعة سلامة العقارية', sub: 'عميل منذ 3 سنوات',
+                role: 'المدير المالي',
+                rating: '10/10', stars: 5,
+                text: '"النظام قادر يتعامل مع حجم عملياتنا الكبير بكفاءة عالية. لوحة التحكم واضحة وبتعطيك صورة كاملة عن الشركة في ثواني. ممتاز جداً."'
             }
         ];
 
         const colorMap = {
-            primary:   { bg: 'rgba(126,203,181,0.15)', border: 'rgba(126,203,181,0.5)',  text: '#7ECBB5',  shadow: 'rgba(126,203,181,0.4)' },
-            secondary: { bg: 'rgba(245,168,75,0.15)',  border: 'rgba(245,168,75,0.5)',   text: '#F5A84B',  shadow: 'rgba(245,168,75,0.4)'  },
-            tertiary:  { bg: 'rgba(232,82,74,0.15)',   border: 'rgba(232,82,74,0.5)',    text: '#E8524A',  shadow: 'rgba(232,82,74,0.4)'   }
+            primary:   { bg: 'rgba(126,203,181,0.15)', border: 'rgba(126,203,181,0.5)',  text: '#7ECBB5',  shadow: '0 20px 60px rgba(126,203,181,0.35)' },
+            secondary: { bg: 'rgba(245,168,75,0.15)',  border: 'rgba(245,168,75,0.5)',   text: '#F5A84B',  shadow: '0 20px 60px rgba(245,168,75,0.35)'  },
+            tertiary:  { bg: 'rgba(232,82,74,0.15)',   border: 'rgba(232,82,74,0.5)',    text: '#E8524A',  shadow: '0 20px 60px rgba(232,82,74,0.35)'   }
         };
 
         function buildStars(count) {
             let html = '';
             for (let i = 0; i < Math.floor(count); i++)
-                html += `<i class="fa-solid fa-star" style="color:#F5A84B;font-size:1.1rem;"></i>`;
+                html += `<i class="fa-solid fa-star" style="color:#F5A84B;"></i>`;
             if (count % 1 !== 0)
-                html += `<i class="fa-solid fa-star-half-stroke" style="color:#F5A84B;font-size:1.1rem;"></i>`;
+                html += `<i class="fa-solid fa-star-half-stroke" style="color:#F5A84B;"></i>`;
             return html;
         }
 
         function buildCard(t) {
             const c = colorMap[t.color];
             return `
-            <div style="background:rgba(255,255,255,0.9);backdrop-filter:blur(20px);border:2px solid ${c.border};border-radius:1rem;padding:2rem;height:100%;box-sizing:border-box;">
-                <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem;">
-                    <div style="width:56px;height:56px;border-radius:50%;background:${c.bg};border:2px solid ${c.border};display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                        <span style="font-size:1.4rem;font-weight:900;color:${c.text};">${t.initial}</span>
-                    </div>
-                    <div>
-                        <p style="font-weight:700;font-size:1rem;color:#1a1a1a;">${t.name}</p>
-                        <p style="font-size:0.8rem;font-weight:600;color:${c.text};">${t.company}</p>
-                        ${t.sub ? `<p style="font-size:0.7rem;color:#666;">${t.sub}</p>` : ''}
-                    </div>
-                </div>
-                <div style="display:flex;align-items:center;gap:4px;margin-bottom:0.75rem;">
+            <div style="background:rgba(255,252,245,0.97);border:2px solid ${c.border};border-radius:1.25rem;padding:2rem;box-sizing:border-box;height:100%;">
+                <div style="font-size:3rem;line-height:1;color:${c.text};opacity:0.25;font-family:Georgia,serif;margin-bottom:0.5rem;">"</div>
+                <p style="color:#3a3020;font-size:0.88rem;line-height:1.75;margin:0 0 1.25rem;">${t.text}</p>
+                <div style="display:flex;align-items:center;gap:4px;margin-bottom:1.25rem;">
                     ${buildStars(t.stars)}
-                    <span style="font-size:0.8rem;font-weight:700;color:${c.text};margin-right:4px;">${t.rating}</span>
+                    <span style="font-size:0.75rem;font-weight:700;color:${c.text};margin-right:6px;">${t.rating}</span>
                 </div>
-                <p style="color:#666;font-style:italic;font-size:0.875rem;line-height:1.6;">${t.text}</p>
+                <div style="display:flex;align-items:center;gap:0.75rem;padding-top:1rem;border-top:1px solid ${c.border};">
+                    <div style="width:46px;height:46px;border-radius:50%;background:${c.bg};border:2px solid ${c.border};display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.2rem;font-weight:900;color:${c.text};">${t.initial}</div>
+                    <div>
+                        <p style="font-weight:700;font-size:0.9rem;color:#1a1a1a;margin:0;">${t.name}</p>
+                        <p style="font-size:0.75rem;color:${c.text};font-weight:600;margin:0;">${t.role}</p>
+                        <p style="font-size:0.7rem;color:#7a6a50;margin:0;">${t.company}</p>
+                    </div>
+                </div>
             </div>`;
         }
 
         let currentIndex = 0;
-        let sliderTimer = null;
-        let isAnimating = false;
+        let sliderTimer  = null;
+        let isAnimating  = false;
 
-        // Each card slot has a fixed logical position (-2 to 2).
-        // We only update innerHTML BEFORE the transition starts (no flash),
-        // then animate via CSS transform/opacity.
         const POSITIONS = [-2, -1, 0, 1, 2];
-        const GAP = 310;
-
+        const GAP = 300;
         const SLOT = {
-            scale:   { '-2': 0.72, '-1': 0.86, '0': 1,     '1': 0.86, '2': 0.72 },
-            opacity: { '-2': 0,    '-1': 0.55,  '0': 1,     '1': 0.55, '2': 0    },
-            z:       { '-2': 1,    '-1': 3,     '0': 10,    '1': 3,    '2': 1    },
-            blur:    { '-2': '6px','-1': '3px', '0': '0px', '1': '3px','2': '6px'},
-            width:   { '-2': 270,  '-1': 300,   '0': 370,   '1': 300,  '2': 270  },
+            scale:   { '-2': 0.72, '-1': 0.85, '0': 1,    '1': 0.85, '2': 0.72 },
+            opacity: { '-2': 0,    '-1': 0.5,   '0': 1,    '1': 0.5,  '2': 0    },
+            z:       { '-2': 1,    '-1': 3,     '0': 10,   '1': 3,    '2': 1    },
+            blur:    { '-2': '6px','-1': '2px', '0': '0px','1': '2px','2': '6px'},
+            width:   { '-2': 260,  '-1': 290,   '0': 360,  '1': 290,  '2': 260  },
         };
 
         function getCardStyle(pos, color) {
             const p = String(pos);
-            const offsetX = pos * GAP;
             return {
-                transform:    `translateX(calc(${offsetX}px - 50%)) scale(${SLOT.scale[p]})`,
-                opacity:      SLOT.opacity[p],
-                zIndex:       SLOT.z[p],
-                filter:       `blur(${SLOT.blur[p]})`,
-                width:        SLOT.width[p] + 'px',
+                transform:     `translateX(calc(${pos * GAP}px - 50%)) scale(${SLOT.scale[p]})`,
+                opacity:       SLOT.opacity[p],
+                zIndex:        SLOT.z[p],
+                filter:        `blur(${SLOT.blur[p]})`,
+                width:         SLOT.width[p] + 'px',
                 pointerEvents: pos === 0 ? 'auto' : 'none',
-                boxShadow:    pos === 0 ? `0 20px 60px ${colorMap[color].shadow}` : 'none',
+                boxShadow:     pos === 0 ? colorMap[color].shadow : 'none',
             };
-        }
-
-        function initCards() {
-            const cards = document.querySelectorAll('.testimonial-card');
-            cards.forEach((card, i) => {
-                const pos = POSITIONS[i];
-                const idx = ((currentIndex + pos) % testimonials.length + testimonials.length) % testimonials.length;
-                card.innerHTML = buildCard(testimonials[idx]);
-                card.style.cssText = '';
-                card.style.position   = 'absolute';
-                card.style.top        = '50%';
-                card.style.left       = '50%';
-                card.style.marginTop  = '-130px';
-                card.style.transition = 'none';
-                const s = getCardStyle(pos, testimonials[idx].color);
-                Object.assign(card.style, s);
-            });
-            updateMobileCard();
         }
 
         function updateMobileCard() {
             const mob = document.querySelector('.testimonial-card-mobile');
             if (!mob) return;
-            mob.style.opacity = '0';
+            mob.style.opacity   = '0';
+            mob.style.transform = 'translateX(30px)';
             setTimeout(() => {
-                mob.innerHTML = buildCard(testimonials[currentIndex]);
-                mob.style.opacity = '1';
-            }, 200);
+                mob.innerHTML       = buildCard(testimonials[currentIndex]);
+                mob.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                mob.style.opacity   = '1';
+                mob.style.transform = 'translateX(0)';
+            }, 150);
+        }
+
+        function initCards() {
+            document.querySelectorAll('.testimonial-card').forEach((card, i) => {
+                const pos = POSITIONS[i];
+                const idx = ((currentIndex + pos) % testimonials.length + testimonials.length) % testimonials.length;
+                card.innerHTML = buildCard(testimonials[idx]);
+                card.style.cssText = '';
+                card.style.position  = 'absolute';
+                card.style.top       = '50%';
+                card.style.left      = '50%';
+                card.style.marginTop = '-160px';
+                card.style.transition = 'none';
+                Object.assign(card.style, getCardStyle(pos, testimonials[idx].color));
+            });
+            updateMobileCard();
+            updateDots();
         }
 
         function animateToIndex(newIndex) {
             if (isAnimating) return;
             isAnimating = true;
-
             const cards = document.querySelectorAll('.testimonial-card');
-            const dir   = ((newIndex - currentIndex) % testimonials.length + testimonials.length) % testimonials.length <= testimonials.length / 2 ? 1 : -1;
+            const dir = ((newIndex - currentIndex) % testimonials.length + testimonials.length) % testimonials.length <= testimonials.length / 2 ? 1 : -1;
 
-            // 1. Update content of cards that are about to become visible
-            //    (do this BEFORE transition so content is ready)
+            // Update content
             cards.forEach((card, i) => {
-                const newPos  = POSITIONS[i] - dir; // where this card will come FROM
-                const newIdx  = ((newIndex + POSITIONS[i]) % testimonials.length + testimonials.length) % testimonials.length;
+                const newIdx = ((newIndex + POSITIONS[i]) % testimonials.length + testimonials.length) % testimonials.length;
                 card.innerHTML = buildCard(testimonials[newIdx]);
             });
 
-            // 2. Snap cards to their "before" position instantly (no transition)
+            // Snap to from-position
             cards.forEach((card, i) => {
                 const fromPos = POSITIONS[i] - dir;
                 const newIdx  = ((newIndex + POSITIONS[i]) % testimonials.length + testimonials.length) % testimonials.length;
                 card.style.transition = 'none';
-                const s = getCardStyle(fromPos, testimonials[newIdx].color);
-                Object.assign(card.style, s);
+                Object.assign(card.style, getCardStyle(fromPos, testimonials[newIdx].color));
             });
 
-            // 3. Force reflow so the browser registers the snap
-            cards[0].getBoundingClientRect();
+            cards[0].getBoundingClientRect(); // force reflow
 
-            // 4. Now animate to final positions with transition
+            // Animate to final
             cards.forEach((card, i) => {
-                const pos    = POSITIONS[i];
-                const newIdx = ((newIndex + pos) % testimonials.length + testimonials.length) % testimonials.length;
-                card.style.transition = 'transform 0.65s cubic-bezier(0.4,0,0.2,1), opacity 0.65s ease, filter 0.65s ease, box-shadow 0.65s ease, width 0.65s ease';
-                const s = getCardStyle(pos, testimonials[newIdx].color);
-                Object.assign(card.style, s);
+                const newIdx = ((newIndex + POSITIONS[i]) % testimonials.length + testimonials.length) % testimonials.length;
+                card.style.transition = 'transform 0.6s cubic-bezier(0.4,0,0.2,1), opacity 0.6s ease, filter 0.6s ease, box-shadow 0.6s ease, width 0.6s ease';
+                Object.assign(card.style, getCardStyle(POSITIONS[i], testimonials[newIdx].color));
             });
 
             currentIndex = newIndex;
-            updateDots();
             updateMobileCard();
-
-            setTimeout(() => { isAnimating = false; }, 680);
+            updateDots();
+            setTimeout(() => { isAnimating = false; }, 650);
         }
 
         function updateDots() {
             const dots = document.getElementById('testimonialDots');
+            if (!dots) return;
             dots.innerHTML = '';
             testimonials.forEach((_, i) => {
                 const d = document.createElement('button');
-                d.style.cssText = `width:${i===currentIndex?'28px':'10px'};height:10px;border-radius:9999px;border:none;cursor:pointer;transition:all 0.3s;background:${i===currentIndex?'#7ECBB5':'#ccc5aa'};`;
+                d.style.cssText = `width:${i===currentIndex?'28px':'10px'};height:10px;border-radius:9999px;border:none;cursor:pointer;transition:all 0.3s;background:${i===currentIndex?'#7ECBB5':'#ccc5aa'};padding:0;`;
                 d.addEventListener('click', () => { animateToIndex(i); resetTimer(); });
                 dots.appendChild(d);
             });
         }
 
-        function nextSlide() {
-            animateToIndex((currentIndex + 1) % testimonials.length);
-            resetTimer();
-        }
-        function prevSlide() {
-            animateToIndex((currentIndex - 1 + testimonials.length) % testimonials.length);
-            resetTimer();
-        }
+        function nextSlide() { animateToIndex((currentIndex + 1) % testimonials.length); resetTimer(); }
+        function prevSlide() { animateToIndex((currentIndex - 1 + testimonials.length) % testimonials.length); resetTimer(); }
 
         function resetTimer() {
             clearInterval(sliderTimer);
-            sliderTimer = setInterval(nextSlide, 10000);
+            sliderTimer = setInterval(nextSlide, 8000);
         }
 
         document.addEventListener('DOMContentLoaded', () => {
             initCards();
-            updateDots();
             resetTimer();
+
+            // Swipe - desktop + mobile
+            ['testimonialSlider', 'testimonialSliderMobile'].forEach(id => {
+                const el = document.getElementById(id);
+                if (!el) return;
+                let sx = 0, sy = 0;
+                el.addEventListener('touchstart', e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
+                el.addEventListener('touchend',   e => {
+                    const dx = e.changedTouches[0].clientX - sx;
+                    const dy = e.changedTouches[0].clientY - sy;
+                    if (Math.abs(dx) < 40 || Math.abs(dx) < Math.abs(dy)) return;
+                    dx < 0 ? nextSlide() : prevSlide();
+                }, { passive: true });
+            });
         });
         // ===== End Testimonials Slider =====
 
